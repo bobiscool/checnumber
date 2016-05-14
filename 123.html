@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	input {
+
+	}
+
+</style>
+	<script>
+		window.onload =function (){
+			var oText = document.getElementById('shuru');
+			var oChe = document.getElementById('che');
+			
+			oChe.onclick = function (){	
+			var str = oText.value;
+			var onoff = true;
+			for(var i=0;i<str.length;i++){
+					n =str.charCodeAt(i);
+					if (n<48 || n>57){
+
+						onoff = false;
+					}else{
+						onoff =true;
+					}
+
+			}
+
+			if (onoff) {
+				alert("ok");
+			}else{
+				alert('not a number');
+			}
+
+
+		};
+
+
+
+
+
+		}
+
+
+	</script>
+</head>
+<body>
+<input id="shuru" type="text"/>
+<input id='che' type="button" value='check'>
+</body>
+</html>
